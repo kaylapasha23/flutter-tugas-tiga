@@ -40,7 +40,7 @@ class TieredPricingCard extends StatelessWidget {
           ),
         ],
       ),
-      // Badge Melayang (Penggunaan Stack)
+      // Badge Melayang (Stack)
       child: Stack(
         clipBehavior: Clip.none,
         children: [
@@ -53,7 +53,7 @@ class TieredPricingCard extends StatelessWidget {
               children: [
                 const SizedBox(height: 10),
 
-                // Header Paket (Penggunaan Column)
+                // Header Paket (Column)
                 const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -83,7 +83,7 @@ class TieredPricingCard extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
-                // Harga & Durasi (Penggunaan Row dengan baseline alignment)
+                // Harga & Durasi (Row + baseline alignment)
                 const Row(
                   crossAxisAlignment: CrossAxisAlignment.baseline,
                   textBaseline: TextBaseline.alphabetic,
@@ -109,7 +109,7 @@ class TieredPricingCard extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
-                // Daftar Fitur Layanan (Kombinasi Column & Row)
+                // Daftar Fitur Layanan (Column + Row)
                 const Column(
                   children: [
                     FeatureItem(text: 'Desain UI/UX Khusus'),
@@ -124,7 +124,7 @@ class TieredPricingCard extends StatelessWidget {
 
                 const SizedBox(height: 24),
 
-                // Tombol Call-to-Action (SizedBox width double.infinity agar membentang)
+                // Tombol Call-to-Action (SizedBox width double.infinity)
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
@@ -150,7 +150,7 @@ class TieredPricingCard extends StatelessWidget {
             ),
           ),
 
-          // Badge Melayang (Positioned di sudut kanan atas)
+          // Badge Melayang (pojok kanan)
           Positioned(
             top: 15,
             right: 15,
@@ -176,7 +176,7 @@ class TieredPricingCard extends StatelessWidget {
   }
 }
 
-// Widget tambahan untuk item fitur layanan (Row dengan Icon centang dan Text)
+// Widget tambahan untuk item fitur layanan (Row + Icon centang + Text)
 class FeatureItem extends StatelessWidget {
   final String text;
 
